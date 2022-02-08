@@ -45,3 +45,12 @@ steps:
         ]
       }
     failNoOp: true
+
+    
+
+- task: ArtifactoryBuildPromotion@1
+  displayName: Publish Build-Info to Artifactory
+  inputs:
+    artifactoryService: 'nitaym-rt'
+    buildName: '$(Build.DefinitionName)'
+    buildNumber: '$(Build.BuildNumber)'
