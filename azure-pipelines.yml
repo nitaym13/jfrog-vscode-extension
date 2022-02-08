@@ -53,5 +53,5 @@ steps:
     artifactoryService: 'nitaym-rt'
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
-    targetRepo: 'default-docker-virtual'
+    targetRepo: 'staging-local'
     status: 'Released'
