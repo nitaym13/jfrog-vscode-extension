@@ -30,3 +30,21 @@ steps:
 - script: |
     npm run package
   displayName: 'Build the package'
+
+- task: ArtifactoryGenericUpload@2
+  inputs:
+    artifactoryService: 'nitaym-rt'
+    specSource: 'taskConfiguration'
+    fileSpec: |
+    {
+      "files": [
+        {
+          "pattern:" "*.vsix",
+          "target:" "npm"
+        }
+      ]
+    }
+    collectBuildInfo: true
+    buildName: '$(Build.DefinitionName)'
+    buildNumber: '$(Build.BuildNumber)'
+    failNoOp: true
