@@ -20,7 +20,7 @@ steps:
   inputs:
     command: 'install'
     artifactoryService: 'nitaym-rt'
-    sourceRepo: 'default-npm-local'
+    sourceRepo: 'default-npm-virtual'
     collectBuildInfo: true
     threads: '10'
     buildName: '$(Build.DefinitionName)'
