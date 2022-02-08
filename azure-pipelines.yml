@@ -45,7 +45,9 @@ steps:
         ]
       }
     failNoOp: true
-
+    collectBuildInfo: true
+    buildName: '$(Build.DefinitionName)'
+    buildNumber: '$(Build.BuildNumber)'
     
 
 - task: ArtifactoryBuildPromotion@1
