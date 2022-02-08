@@ -39,12 +39,9 @@ steps:
       {
         "files": [
           {
-            "pattern:" "*.vsix",
-            "target:" "npm"
+            "pattern": "*.vsix",
+            "target": "npm-default-virtual"
           }
         ]
       }
-    collectBuildInfo: true
-    buildName: '$(Build.DefinitionName)'
-    buildNumber: '$(Build.BuildNumber)'
     failNoOp: true
