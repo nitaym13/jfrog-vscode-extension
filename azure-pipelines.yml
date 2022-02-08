@@ -49,8 +49,9 @@ steps:
     
 
 - task: ArtifactoryBuildPromotion@1
-  displayName: Publish Build-Info to Artifactory
   inputs:
     artifactoryService: 'nitaym-rt'
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
+    targetRepo: 'default-docker-virtual'
+    status: 'Released'
