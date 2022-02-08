@@ -40,7 +40,7 @@ steps:
         "files": [
           {
             "pattern": "*.vsix",
-            "target": "npm-default-virtual"
+            "target": "default-npm-virtual"
           }
         ]
       }
