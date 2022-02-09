@@ -50,10 +50,8 @@ steps:
     buildNumber: '$(Build.BuildNumber)'
     
 
-- task: ArtifactoryBuildPromotion@1
+- task: ArtifactoryPublishBuildInfo@1
   inputs:
     artifactoryService: 'nitaym-rt'
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
-    targetRepo: 'staging-local'
-    status: 'Released'
